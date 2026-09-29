@@ -1,0 +1,5 @@
+digraph "CFG for '_ZNKSt7complexIdE4imagB5cxx11Ev' function" {
+	label="CFG for '_ZNKSt7complexIdE4imagB5cxx11Ev' function";
+
+	Node0x6443529211d0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{1:\l|  %2 = alloca ptr, align 8\l  store ptr %0, ptr %2, align 8\l  %3 = load ptr, ptr %2, align 8\l  %4 = getelementptr inbounds nuw %\"class.std::complex\", ptr %3, i32 0, i32 0\l  %5 = getelementptr inbounds nuw \{ double, double \}, ptr %4, i32 0, i32 1\l  %6 = load double, ptr %5, align 8\l  ret double %6\l}"];
+}

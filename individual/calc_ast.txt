@@ -1,0 +1,20 @@
+`-FunctionDecl 0x5fda0cad0f10 <calc.cpp:3:1, line:5:1> line:3:22 calc 'std::complex<double> (std::complex<double>, std::complex<double>)'
+  |-ParmVarDecl 0x5fda0cad0c58 <col:27, col:48> col:48 used z1 'std::complex<double>'
+  |-ParmVarDecl 0x5fda0cad0dd0 <col:52, col:73> col:73 used z2 'std::complex<double>'
+  `-CompoundStmt 0x5fda0cad2088 <col:77, line:5:1>
+    `-ReturnStmt 0x5fda0cad2078 <line:4:5, col:22>
+      `-ExprWithCleanups 0x5fda0cad2060 <col:12, col:22> 'complex<double>':'std::complex<double>'
+        `-CXXOperatorCallExpr 0x5fda0cad2028 <col:12, col:22> 'complex<double>':'std::complex<double>' '+' adl
+          |-ImplicitCastExpr 0x5fda0cad2010 <col:20> 'complex<double> (*)(const complex<double> &, const complex<double> &)' <FunctionToPointerDecay>
+          | `-DeclRefExpr 0x5fda0cad1fc0 <col:20> 'complex<double> (const complex<double> &, const complex<double> &)' lvalue Function 0x5fda0cad1e00 'operator+' 'complex<double> (const complex<double> &, const complex<double> &)'
+          |-MaterializeTemporaryExpr 0x5fda0cad1f90 <col:12, col:17> 'const complex<double>':'const std::complex<double>' lvalue
+          | `-ImplicitCastExpr 0x5fda0cad1f78 <col:12, col:17> 'const complex<double>':'const std::complex<double>' <NoOp>
+          |   `-CXXOperatorCallExpr 0x5fda0cad16c8 <col:12, col:17> 'complex<double>':'std::complex<double>' '*' adl
+          |     |-ImplicitCastExpr 0x5fda0cad16b0 <col:15> 'complex<double> (*)(const complex<double> &, const complex<double> &)' <FunctionToPointerDecay>
+          |     | `-DeclRefExpr 0x5fda0cad1628 <col:15> 'complex<double> (const complex<double> &, const complex<double> &)' lvalue Function 0x5fda0cad1480 'operator*' 'complex<double> (const complex<double> &, const complex<double> &)'
+          |     |-ImplicitCastExpr 0x5fda0cad15f8 <col:12> 'const complex<double>':'const std::complex<double>' lvalue <NoOp>
+          |     | `-DeclRefExpr 0x5fda0cad0fc8 <col:12> 'std::complex<double>' lvalue ParmVar 0x5fda0cad0c58 'z1' 'std::complex<double>'
+          |     `-ImplicitCastExpr 0x5fda0cad1610 <col:17> 'const complex<double>':'const std::complex<double>' lvalue <NoOp>
+          |       `-DeclRefExpr 0x5fda0cad0fe8 <col:17> 'std::complex<double>' lvalue ParmVar 0x5fda0cad0dd0 'z2' 'std::complex<double>'
+          `-ImplicitCastExpr 0x5fda0cad1fa8 <col:22> 'const complex<double>':'const std::complex<double>' lvalue <NoOp>
+            `-DeclRefExpr 0x5fda0cad1700 <col:22> 'std::complex<double>' lvalue ParmVar 0x5fda0cad0c58 'z1' 'std::complex<double>'

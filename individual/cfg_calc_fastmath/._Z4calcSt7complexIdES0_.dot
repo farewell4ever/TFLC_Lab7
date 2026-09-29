@@ -1,0 +1,5 @@
+digraph "CFG for '_Z4calcSt7complexIdES0_' function" {
+	label="CFG for '_Z4calcSt7complexIdES0_' function";
+
+	Node0x59ddd2755680 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{4:\l|  %5 = fmul fast double %2, %0\l  %6 = fmul fast double %3, %0\l  %7 = fmul fast double %2, %1\l  %8 = fadd fast double %5, %0\l  %9 = fmul fast double %1, %3\l  %10 = fsub fast double %8, %9\l  %11 = fadd fast double %7, %1\l  %12 = fadd fast double %11, %6\l  %13 = insertvalue \{ double, double \} poison, double %10, 0\l  %14 = insertvalue \{ double, double \} %13, double %12, 1\l  ret \{ double, double \} %14\l}"];
+}

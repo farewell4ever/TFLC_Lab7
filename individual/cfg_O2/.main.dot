@@ -1,0 +1,16 @@
+digraph "CFG for 'main' function" {
+	label="CFG for 'main' function";
+
+	Node0x5a111d433ab0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{0:\l|  %1 = tail call noundef nonnull align 8 dereferenceable(8) ptr\l... @_ZNSo9_M_insertIdEERSoT_(ptr noundef nonnull align 8 dereferenceable(8)\l... @_ZSt4cout, double noundef -2.000000e+00)\l  %2 = tail call noundef nonnull align 8 dereferenceable(8) ptr\l... @_ZSt16__ostream_insertIcSt11char_traitsIcEERSt13basic_ostreamIT_T0_ES6_PKS3_l\l...(ptr noundef nonnull align 8 dereferenceable(8) %1, ptr noundef nonnull @.str,\l... i64 noundef 1)\l  %3 = tail call noundef nonnull align 8 dereferenceable(8) ptr\l... @_ZNSo9_M_insertIdEERSoT_(ptr noundef nonnull align 8 dereferenceable(8) %1,\l... double noundef 1.400000e+01)\l  %4 = load ptr, ptr %3, align 8, !tbaa !5\l  %5 = getelementptr i8, ptr %4, i64 -24\l  %6 = load i64, ptr %5, align 8\l  %7 = getelementptr inbounds i8, ptr %3, i64 %6\l  %8 = getelementptr inbounds nuw i8, ptr %7, i64 240\l  %9 = load ptr, ptr %8, align 8, !tbaa !8\l  %10 = icmp eq ptr %9, null\l  br i1 %10, label %11, label %12\l|{<s0>T|<s1>F}}"];
+	Node0x5a111d433ab0:s0 -> Node0x5a111d460cf0;
+	Node0x5a111d433ab0:s1 -> Node0x5a111d460d90;
+	Node0x5a111d460cf0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#f4c5ad70" fontname="Courier",label="{11:\l|  tail call void @_ZSt16__throw_bad_castv() #3\l  unreachable\l}"];
+	Node0x5a111d460d90 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{12:\l|  %13 = getelementptr inbounds nuw i8, ptr %9, i64 56\l  %14 = load i8, ptr %13, align 8, !tbaa !28\l  %15 = icmp eq i8 %14, 0\l  br i1 %15, label %19, label %16\l|{<s0>T|<s1>F}}"];
+	Node0x5a111d460d90:s0 -> Node0x5a111d461790;
+	Node0x5a111d460d90:s1 -> Node0x5a111d461830;
+	Node0x5a111d461830 [shape=record,color="#b70d28ff", style=filled, fillcolor="#bb1b2c70" fontname="Courier",label="{16:\l|  %17 = getelementptr inbounds nuw i8, ptr %9, i64 67\l  %18 = load i8, ptr %17, align 1, !tbaa !34\l  br label %24\l}"];
+	Node0x5a111d461830 -> Node0x5a111d461bd0;
+	Node0x5a111d461790 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#c32e3170" fontname="Courier",label="{19:\l|  tail call void @_ZNKSt5ctypeIcE13_M_widen_initEv(ptr noundef nonnull align\l... 8 dereferenceable(570) %9)\l  %20 = load ptr, ptr %9, align 8, !tbaa !5\l  %21 = getelementptr inbounds nuw i8, ptr %20, i64 48\l  %22 = load ptr, ptr %21, align 8\l  %23 = tail call noundef signext i8 %22(ptr noundef nonnull align 8\l... dereferenceable(570) %9, i8 noundef signext 10)\l  br label %24\l}"];
+	Node0x5a111d461790 -> Node0x5a111d461bd0;
+	Node0x5a111d461bd0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{24:\l|  %25 = phi i8 [ %18, %16 ], [ %23, %19 ]\l  %26 = tail call noundef nonnull align 8 dereferenceable(8) ptr\l... @_ZNSo3putEc(ptr noundef nonnull align 8 dereferenceable(8) %3, i8 noundef\l... signext %25)\l  %27 = tail call noundef nonnull align 8 dereferenceable(8) ptr\l... @_ZNSo5flushEv(ptr noundef nonnull align 8 dereferenceable(8) %26)\l  ret i32 0\l}"];
+}

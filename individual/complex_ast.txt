@@ -1,0 +1,58 @@
+`-FunctionDecl 0x5e290a7ce4c0 <complex.cpp:4:1, line:10:1> line:4:5 main 'int ()'
+  `-CompoundStmt 0x5e290a7d3f20 <col:12, line:10:1>
+    |-DeclStmt 0x5e290a7ce7a8 <line:5:5, col:38>
+    | `-VarDecl 0x5e290a7ce668 <col:5, col:37> col:26 used z1 'std::complex<double>' callinit
+    |   `-CXXConstructExpr 0x5e290a7ce770 <col:26, col:37> 'std::complex<double>' 'void (double, double)'
+    |     |-FloatingLiteral 0x5e290a7ce6d0 <col:29> 'double' 3.000000e+00
+    |     `-FloatingLiteral 0x5e290a7ce6f0 <col:34> 'double' 4.000000e+00
+    |-DeclStmt 0x5e290a7cea08 <line:6:5, col:38>
+    | `-VarDecl 0x5e290a7ce8c8 <col:5, col:37> col:26 used z2 'std::complex<double>' callinit
+    |   `-CXXConstructExpr 0x5e290a7ce9d0 <col:26, col:37> 'std::complex<double>' 'void (double, double)'
+    |     |-FloatingLiteral 0x5e290a7ce930 <col:29> 'double' 1.000000e+00
+    |     `-FloatingLiteral 0x5e290a7ce950 <col:34> 'double' 2.000000e+00
+    |-DeclStmt 0x5e290a7cfc48 <line:7:5, col:27>
+    | `-VarDecl 0x5e290a7cea38 <col:5, col:25> col:10 used z3 'complex<double>':'std::complex<double>' cinit
+    |   `-ExprWithCleanups 0x5e290a7cfc30 <col:15, col:25> 'complex<double>':'std::complex<double>'
+    |     `-CXXOperatorCallExpr 0x5e290a7cfb08 <col:15, col:25> 'complex<double>':'std::complex<double>' '+' adl
+    |       |-ImplicitCastExpr 0x5e290a7cfaf0 <col:23> 'complex<double> (*)(const complex<double> &, const complex<double> &)' <FunctionToPointerDecay>
+    |       | `-DeclRefExpr 0x5e290a7cfaa0 <col:23> 'complex<double> (const complex<double> &, const complex<double> &)' lvalue Function 0x5e290a7cf8e0 'operator+' 'complex<double> (const complex<double> &, const complex<double> &)'
+    |       |-MaterializeTemporaryExpr 0x5e290a7cfa70 <col:15, col:20> 'const complex<double>':'const std::complex<double>' lvalue
+    |       | `-ImplicitCastExpr 0x5e290a7cfa58 <col:15, col:20> 'const complex<double>':'const std::complex<double>' <NoOp>
+    |       |   `-CXXOperatorCallExpr 0x5e290a7cf1a8 <col:15, col:20> 'complex<double>':'std::complex<double>' '*' adl
+    |       |     |-ImplicitCastExpr 0x5e290a7cf190 <col:18> 'complex<double> (*)(const complex<double> &, const complex<double> &)' <FunctionToPointerDecay>
+    |       |     | `-DeclRefExpr 0x5e290a7cf108 <col:18> 'complex<double> (const complex<double> &, const complex<double> &)' lvalue Function 0x5e290a7cef60 'operator*' 'complex<double> (const complex<double> &, const complex<double> &)'
+    |       |     |-ImplicitCastExpr 0x5e290a7cf0d8 <col:15> 'const complex<double>':'const std::complex<double>' lvalue <NoOp>
+    |       |     | `-DeclRefExpr 0x5e290a7ceaa0 <col:15> 'std::complex<double>' lvalue Var 0x5e290a7ce668 'z1' 'std::complex<double>'
+    |       |     `-ImplicitCastExpr 0x5e290a7cf0f0 <col:20> 'const complex<double>':'const std::complex<double>' lvalue <NoOp>
+    |       |       `-DeclRefExpr 0x5e290a7ceac0 <col:20> 'std::complex<double>' lvalue Var 0x5e290a7ce8c8 'z2' 'std::complex<double>'
+    |       `-ImplicitCastExpr 0x5e290a7cfa88 <col:25> 'const complex<double>':'const std::complex<double>' lvalue <NoOp>
+    |         `-DeclRefExpr 0x5e290a7cf1e0 <col:25> 'std::complex<double>' lvalue Var 0x5e290a7ce668 'z1' 'std::complex<double>'
+    |-CXXOperatorCallExpr 0x5e290a7d3e88 <line:8:5, col:56> '__ostream_type':'std::basic_ostream<char>' lvalue '<<'
+    | |-ImplicitCastExpr 0x5e290a7d3e70 <col:48> '__ostream_type &(*)(__ostream_type &(*)(__ostream_type &))' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x5e290a7d3df0 <col:48> '__ostream_type &(__ostream_type &(*)(__ostream_type &))' lvalue CXXMethod 0x5e290a12af38 'operator<<' '__ostream_type &(__ostream_type &(*)(__ostream_type &))'
+    | |-CXXOperatorCallExpr 0x5e290a7d37b8 <col:5, col:46> '__ostream_type':'std::basic_ostream<char>' lvalue '<<'
+    | | |-ImplicitCastExpr 0x5e290a7d37a0 <col:35> '__ostream_type &(*)(double)' <FunctionToPointerDecay>
+    | | | `-DeclRefExpr 0x5e290a7d3780 <col:35> '__ostream_type &(double)' lvalue CXXMethod 0x5e290a12c818 'operator<<' '__ostream_type &(double)'
+    | | |-CXXOperatorCallExpr 0x5e290a7d3658 <col:5, col:31> 'basic_ostream<char, std::char_traits<char>>':'std::basic_ostream<char>' lvalue '<<' adl
+    | | | |-ImplicitCastExpr 0x5e290a7d3640 <col:28> 'basic_ostream<char, std::char_traits<char>> &(*)(basic_ostream<char, std::char_traits<char>> &, const char *)' <FunctionToPointerDecay>
+    | | | | `-DeclRefExpr 0x5e290a7d35b8 <col:28> 'basic_ostream<char, std::char_traits<char>> &(basic_ostream<char, std::char_traits<char>> &, const char *)' lvalue Function 0x5e290a136700 'operator<<' 'basic_ostream<char, std::char_traits<char>> &(basic_ostream<char, std::char_traits<char>> &, const char *)'
+    | | | |-CXXOperatorCallExpr 0x5e290a7cfe78 <col:5, col:26> '__ostream_type':'std::basic_ostream<char>' lvalue '<<'
+    | | | | |-ImplicitCastExpr 0x5e290a7cfe60 <col:15> '__ostream_type &(*)(double)' <FunctionToPointerDecay>
+    | | | | | `-DeclRefExpr 0x5e290a7cfdd8 <col:15> '__ostream_type &(double)' lvalue CXXMethod 0x5e290a12c818 'operator<<' '__ostream_type &(double)'
+    | | | | |-DeclRefExpr 0x5e290a7cfcb0 <col:5, col:10> 'ostream':'std::basic_ostream<char>' lvalue Var 0x5e290a1ddce8 'cout' 'ostream':'std::basic_ostream<char>'
+    | | | | | `-NestedNameSpecifier Namespace 0x5e290a7adb20 'std'
+    | | | | `-CXXMemberCallExpr 0x5e290a7cfda8 <col:18, col:26> 'double'
+    | | | |   `-MemberExpr 0x5e290a7cfd60 <col:18, col:21> '<bound member function type>' .real 0x5e290a796a18
+    | | | |     `-ImplicitCastExpr 0x5e290a7cfd90 <col:18> 'const std::complex<double>' lvalue <NoOp>
+    | | | |       `-DeclRefExpr 0x5e290a7cfce0 <col:18> 'complex<double>':'std::complex<double>' lvalue Var 0x5e290a7cea38 'z3' 'complex<double>':'std::complex<double>'
+    | | | `-ImplicitCastExpr 0x5e290a7d35a0 <col:31> 'const char *' <ArrayToPointerDecay>
+    | | |   `-StringLiteral 0x5e290a7d0098 <col:31> 'const char[2]' lvalue " "
+    | | `-CXXMemberCallExpr 0x5e290a7d3758 <col:38, col:46> 'double'
+    | |   `-MemberExpr 0x5e290a7d3710 <col:38, col:41> '<bound member function type>' .imag 0x5e290a796b90
+    | |     `-ImplicitCastExpr 0x5e290a7d3740 <col:38> 'const std::complex<double>' lvalue <NoOp>
+    | |       `-DeclRefExpr 0x5e290a7d3690 <col:38> 'complex<double>':'std::complex<double>' lvalue Var 0x5e290a7cea38 'z3' 'complex<double>':'std::complex<double>'
+    | `-ImplicitCastExpr 0x5e290a7d3dd8 <col:51, col:56> 'basic_ostream<char, std::char_traits<char>> &(*)(basic_ostream<char, std::char_traits<char>> &)' <FunctionToPointerDecay>
+    |   `-DeclRefExpr 0x5e290a7d3da0 <col:51, col:56> 'basic_ostream<char, std::char_traits<char>> &(basic_ostream<char, std::char_traits<char>> &)' lvalue Function 0x5e290a1318a0 'endl' 'basic_ostream<char, std::char_traits<char>> &(basic_ostream<char, std::char_traits<char>> &)' (FunctionTemplate 0x5e290a10efc8 'endl')
+    |     `-NestedNameSpecifier Namespace 0x5e290a7adb20 'std'
+    `-ReturnStmt 0x5e290a7d3f10 <line:9:5, col:12>
+      `-IntegerLiteral 0x5e290a7d3ef0 <col:12> 'int' 0
