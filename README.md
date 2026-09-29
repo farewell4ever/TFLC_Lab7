@@ -60,7 +60,9 @@ sudo apt update && sudo apt install -y clang llvm graphviz
 + `llvm` — библиотека и утилиты для работы с IR, в том числе `opt` (оптимизатор) и `llc`;
 + `graphviz` — утилита `dot` для перевода графов из `.dot` в `.png`.
 
-![Установка](docs/screenshots/install.png)
+Проверка установленных инструментов:
+
+![Проверка установки](docs/screenshot1.png)
 
 ### Исходный код
 [general/main.c](general/main.c):
@@ -218,7 +220,7 @@ dot -Tpng .main.dot -o cfg.main.png
 
 В программе нет ветвлений, поэтому каждая функция — один базовый блок и до, и после оптимизации. Меняется содержимое блоков: при `-O0` в `main` 11 инструкций с `alloca`/`load`/`store` и вызовом `square`, при `-O2` — 2 инструкции. CFG строится отдельно для каждой функции, общего графа всей программы LLVM не строит.
 
-![Выполнение команд общей части](docs/screenshots/general.png)
+![Выполнение команд общей части](docs/screenshot2.png)
 
 ## Индивидуальное задание (вариант 2.1 «Комплексные числа»)
 
@@ -418,7 +420,7 @@ CFG `calc` после `-O2` — 4 блока, проверка на NaN оста
 
 ![CFG calc fast-math](individual/cfg_calc_fastmath/cfg._Z4calcSt7complexIdES0_.png)
 
-![Выполнение команд индивидуальной части](docs/screenshots/individual.png)
+![Выполнение команд индивидуальной части](docs/screenshot3.png)
 
 ### 5. Выводы по индивидуальному заданию
 + Для компилятора пользовательский (перегруженный) оператор — это обычная функция. В AST `z1 * z2` — не `BinaryOperator`, а `CXXOperatorCallExpr`, т. е. вызов `operator*`; при `-O0` в IR он остаётся настоящим `call`.
